@@ -4,8 +4,8 @@ Unit CODE;
 Interface
   Procedure Draw(); // Draw smthing @60
   Procedure Init(); // Before all code 
-  Procedure MOUSE_PRESSED(Button , State , mX , mY : LongInt ) ;  // subj
-  Procedure KEY_PRESSED(Key : LongInt ) ; // subj
+  Procedure Mouse_Pressed(Button , State , mX , mY : LongInt ) ;  // subj
+  Procedure Key_Pressed(Key : LongInt ) ; // subj
  
 
 Implementation
@@ -48,12 +48,12 @@ Implementation
     Sonic[5].x := 10; Sonic[5].y := 10;
   end;
   
-  Procedure MOUSE_PRESSED(Button , State , mX , mY : LongInt ) ;  // subj
+  Procedure Mouse_Pressed(Button , State , mX , mY : LongInt ) ;  // subj
   begin
     mode := state;
   end;
     
-  Procedure KEY_PRESSED(Key : LongInt ) ; // subj
+  Procedure Key_Pressed(Key : LongInt ) ; // subj
   begin
     if ( key = ord('w') ) then
       inc ( y , 5 ) ; 

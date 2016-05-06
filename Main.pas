@@ -40,14 +40,14 @@ end;
 
 procedure GLKeyboard(Key: Byte; X, Y: Longint); cdecl;
 begin
-  CODE.KEY_PRESSED ( Key ) ; 
+  CODE.Key_Pressed ( Key ) ; 
   if Key = 27 then
     Halt(0);
 end;
 
 procedure GLMouse(Button , State , X, Y : LongInt ) ; cdecl;
 begin
-  CODE.MOUSE_PRESSED ( Button , State , X , Y ) ; 
+  CODE.Mouse_Pressed ( Button , State , X , Y ) ; 
   //writeLn ( Button , ' [ ' , State , ' ] ' , ' @ ' , x , ':' , y ) ; 
 end;
   
@@ -56,10 +56,6 @@ const
   AppWidth = 800; 
   AppHeight = 800; 
 
-procedure InitializeGL; 
-begin 
-  glClearColor(0.18, 0.20, 0.66, 0); 
-end; 
 
 var 
   ScreenWidth, ScreenHeight: Integer; 
